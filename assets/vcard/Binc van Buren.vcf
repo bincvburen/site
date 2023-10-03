@@ -3,7 +3,8 @@ VERSION:3.0
 PRODID:-//Apple Inc.//macOS 14.0//EN
 N:van Buren;Binc;;;
 FN:Binc van Buren
-EMAIL;type=INTERNET;type=HOME;type=pref:bincvanburen@icloud.com
+item1.EMAIL;type=INTERNET;type=pref:bincvanburen@icloud.com
+item1.X-ABLabel:mail
 TEL;type=CELL;type=VOICE;type=pref:(06) 53 64 49 76
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAkACQAAD/4QB0RXhpZgAATU0AKgAA
  AAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAA
