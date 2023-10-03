@@ -377,12 +377,12 @@ main section:nth-of-type(2) div:first-of-type {
 
 .home main section:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
 	margin-top: 3em;
+	margin-left: 3em;
 }
 
 .home main section:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) p {
 	font-size: 18px;
 	line-height: 1.5;
-	margin-left: 3em;
 	max-width: 30em;
 	margin-right: 10%;
 }
@@ -398,7 +398,6 @@ main section:nth-of-type(2) div:first-of-type {
 
 .home main section:nth-of-type(2)>div:nth-of-type(1) button {
 	margin-top: 1.5em;
-	margin-left: 3em;
 }
 
 @media screen and (max-width: 800px) {
@@ -463,6 +462,27 @@ main section:nth-of-type(2) div:first-of-type {
 		font-size: 20px;
 	}
 
+	.home main section:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
+		margin-left: 0em;
+	}
+
+	.home main section:nth-of-type(4) div:nth-of-type(2) article:nth-of-type(3) p:nth-of-type(2) {
+		display: none;
+	}
+
+	.home main section:nth-of-type(4) div:nth-of-type(2) article:nth-of-type(2) p:nth-of-type(2) {
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 800px) { 
+	.home main section:nth-of-type(4) div:nth-of-type(2) article:nth-of-type(3) p:nth-of-type(1) {
+		display: none;
+	}
+	.home main section:nth-of-type(4) div:nth-of-type(2) article:nth-of-type(2) p:nth-of-type(1) {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 1250px) {
@@ -476,6 +496,10 @@ main section:nth-of-type(2) div:first-of-type {
 	}
 	
 	.home main section:nth-of-type(2)>div:nth-of-type(1) button {
+		margin-left: 0em;
+	}
+
+	.home main section:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
 		margin-left: 0em;
 	}
 
@@ -652,20 +676,6 @@ main section:nth-of-type(2) div:first-of-type {
 	justify-self: flex-end;
 }
 
-@media (prefers-color-scheme:dark) {
-
-	:root {
-		--achtergrond: black;
-		--h-zwart: white;
-		--h3-kleur-donker: rgb(221, 0, 66);
-	}
-
-	.grid1 article {
-		box-shadow: 0px 0px 10px rgb(134, 133, 133);
-	}
-	
-}
-
 .grid1 article div:nth-of-type(2) {
 	display: flex;
 	flex-direction: column;
@@ -700,8 +710,7 @@ main section:nth-of-type(2) div:first-of-type {
 }
 
 .grid-button_contact {
-	color: black;
-	background-color: white;
+	background-color: black;
 	padding: 0.8em 0em;
 	margin-top: 1em;
 	border-radius: 2em;
@@ -720,6 +729,10 @@ main section:nth-of-type(2) div:first-of-type {
 	background-image: linear-gradient(150deg, var(--h3-kleur) -30%, var(--h3-kleur-donker));
 	border-color: white;
 	border-width: 3px;
+}
+
+.grid-button_contact .bt {
+	color: white;
 }
 
 .grid-button_contact:hover .bt {
@@ -743,8 +756,15 @@ font-weight: bold;
 }
 
 .home main section:nth-of-type(4) div:nth-of-type(2) article {
-	background-color: black;
+	background-color: var(--achtergrond)
 }
+
+.home main section:nth-of-type(4) div:nth-of-type(2) div h3,
+.home main section:nth-of-type(4) div:nth-of-type(2) div p {
+	color: var(--h-zwart)
+}
+
+	
 
 
 @media screen and (max-width: 800px) {
@@ -754,4 +774,50 @@ font-weight: bold;
 		font-size: 75px;
 	}
 
+
+}
+
+@media (prefers-color-scheme:dark) {
+
+	:root {
+		--achtergrond: black;
+		--h-zwart: white;
+		--h3-kleur-donker: rgb(221, 0, 66);
+	}
+
+	.grid1 article {
+		box-shadow: 0px 0px 10px rgb(134, 133, 133);
+	}
+
+	.grid-button_contact {
+		color: black;
+		background-color: white;
+		padding: 0.8em 0em;
+		margin-top: 1em;
+		border-radius: 2em;
+		border-color: rgba(0, 0, 0, 0);
+		border-width: 3px;
+		border-style: solid;
+		font-family: 'Regular';
+		font-size: 17px;
+		transition: background-color 0.15s ease-in-out;
+		transition: padding 0.15s ease-in-out;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.grid-button_contact:hover {
+		background-image: linear-gradient(150deg, var(--h3-kleur) -30%, var(--h3-kleur-donker));
+		border-color: white;
+		border-width: 3px;
+	}
+	
+	.grid-button_contact:hover .bt {
+		color: white;
+	}
+
+	.grid-button_contact .bt {
+		color: black;
+	}
+	
 }
