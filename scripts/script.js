@@ -1,20 +1,24 @@
 // JavaScript Document
-console.log("hi");
-
-$(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-  
-    $('.video_wrapper2').css({
-        opacity: function() {
-          var elementHeight = $(this).height(),
-              opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
-      
-          return opacity;
-        }
-      });
-  });
+console.log("hiii");
 
 
+
+var today = new Date();
+var time = today.getHours();
+var greet;
+
+if (time >= 18) {
+  greet = 'Goedenavond';
+} else if (time >= 12) {
+  greet = 'Goedemiddag';
+} else if (time >= 5) {
+  greet = 'Goedemorgen';
+} else {
+  greet = 'Goedenacht';
+}
+
+var show = document.getElementById('time');
+show.textContent = greet;
 
 
 

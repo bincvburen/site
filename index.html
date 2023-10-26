@@ -6,7 +6,7 @@
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Home - Apple (NL)</title>
+	<title>DJ | Binc van Buren</title>
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -14,22 +14,24 @@
 
 <body class="home">
 
+	<script defer src="scripts/script.js"></script>
+
 	<header>
 		<nav>
-			<!-- <img src="./images/iconen/logo_small.svg" alt="Apple logo"> -->
+			<img src="./images/iconen/logo_small.svg" alt="Apple logo">
 			<div> <a href="iphone_14.html">
 					<h1>Binc van Buren</h1>
 				</a></div>
-			<div> <a href="iphone_14.html"><p>Multimedia</p></a></div>
+			<div> <a href="portfolio.html"><p>Design</p></a></div>
 		</nav>
 	</header>
 
 	<main>
 		<section class="video_wrapper">
-			<video playsinline autoplay muted loop poster="cake.jpg">
-				<source src="./videos/dj_klein.mp4" type="video/webm">
-				Your browser does not support the video tag.
-			</video>
+			
+
+			<video src="./videos/dj_klein.mp4" playsinline loop muted autoplay></video> 
+
 
 			<div class="welkom_tekst">
 				<h2>Jij vraagt, ik draai</h2>
@@ -47,15 +49,12 @@
 
 		<section class="video_wrapper2" id="welkom">
 
-			<video playsinline autoplay muted loop poster="cake.jpg">
-				<source src="./videos/gradient.mp4" type="video/webm">
-				Your browser does not support the video tag.
-			</video>
+			<video src="./videos/gradient.mp4" playsinline loop muted autoplay></video> 
 
 			<div>
 				<div>
 					<div>
-						<h2>Welkom</h2>
+						<h2 id="time"></h2>
 						<p>It's Friday then...</p>
 					</div>
 
@@ -188,8 +187,6 @@
 	<footer>
 
 	</footer>
-
-	<script defer src="scripts/script.js"></script>
 </body>
 
 </html>
